@@ -1,5 +1,3 @@
-import { Fragment } from 'react';
-
 // Import Images
 import clock from '../img/clock.svg';
 import diaphragm from '../img/diaphragm.svg';
@@ -9,7 +7,7 @@ import home2 from '../img/home2.png';
 
 const ServicesSection = () => {
 	return (
-		<Fragment className='services'>
+		<div className='services'>
 			<div className='description'>
 				<h2>
 					High <span>quality</span> services
@@ -54,7 +52,7 @@ const ServicesSection = () => {
 			<div className='image'>
 				<img src={home2} alt='canon eos camera' />
 			</div>
-		</Fragment>
+		</div>
 	);
 };
 
