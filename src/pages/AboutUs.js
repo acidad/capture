@@ -1,10 +1,14 @@
+import { Fragment } from 'react';
+
 import AboutSection from '../components/AboutSection';
+import ServicesSection from '../components/ServicesSection';
 
 const AboutUs = () => {
 	return (
-		<div className='about-us'>
+		<Fragment className='about-us'>
 			<AboutSection />
-		</div>
+			<ServicesSection />
+		</Fragment>
 	);
 };
 
