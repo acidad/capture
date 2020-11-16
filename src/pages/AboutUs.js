@@ -1,11 +1,11 @@
 import AboutSection from '../components/AboutSection';
 
-function AboutUs() {
+const AboutUs = () => {
 	return (
 		<div className='about-us'>
 			<AboutSection />
 		</div>
 	);
-}
+};
 
 export default AboutUs;

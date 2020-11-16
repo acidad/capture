@@ -1,3 +1,4 @@
+// Import Pages
 import AboutUs from './pages/AboutUs';
 
 function App() {
