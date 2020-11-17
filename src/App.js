@@ -1,6 +1,11 @@
+import { Route, Switch } from 'react-router-dom';
+
 // Import Pages
-import AboutUs from './pages/AboutUs';
 import Nav from './components/Nav';
+import NotFound from './pages/404';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
+import OurWork from './pages/OurWork';
 
 // Global Style
 import GlobalStyles from './components/GlobalStyle';
@@ -10,7 +15,12 @@ function App() {
 		<div className='App'>
 			<GlobalStyles />
 			<Nav />
-			<AboutUs />
+			<Switch>
+				<Route exact path='/' component={AboutUs} />
+				<Route exact path='/work' component={OurWork} />
+				<Route exact path='/contact' component={ContactUs} />
+				<Route component={NotFound} />
+			</Switch>
 		</div>
 	);
 }
