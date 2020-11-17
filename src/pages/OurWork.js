@@ -1,35 +1,46 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import { MovieState } from '../movieState';
+
 // Images
-import athlete from '../img/athlete-small.png';
-import theracer from '../img/theracer-small.png';
-import goodtimes from '../img/goodtimes-small.png';
+// import athlete from '../img/athlete-small.png';
+// import theracer from '../img/theracer-small.png';
+// import goodtimes from '../img/goodtimes-small.png';
 
 const OurWork = () => {
 	return (
 		<Work>
-			<Movie>
+			{MovieState().map(movie => (
+				<Movie key={movie.id}>
+					<h2>{movie.title}</h2>
+					<div className='line'></div>
+					<Link to={movie.url}>
+						<img src={movie.mainImg} alt={movie.title} />
+					</Link>
+				</Movie>
+			))}
+			{/* <Movie>
 				<h2>The Athlete</h2>
 				<div className='line'></div>
-				<Link to='/'>
+				<Link to='/work/the-athlete'>
 					<img src={athlete} alt='boxer in the ring' />
 				</Link>
 			</Movie>
 			<Movie>
 				<h2>The Racer</h2>
 				<div className='line'></div>
-				<Link to='/'>
+				<Link to='/work/the-racer'>
 					<img src={theracer} alt='girl next to orange car' />
 				</Link>
 			</Movie>
 			<Movie>
 				<h2>Good Times</h2>
 				<div className='line'></div>
-				<Link to='/'>
+				<Link to='/work/good-times'>
 					<img src={goodtimes} alt='couple overlooking ocean' />
 				</Link>
-			</Movie>
+			</Movie> */}
 		</Work>
 	);
 };

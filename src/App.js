@@ -6,6 +6,7 @@ import NotFound from './pages/404';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import OurWork from './pages/OurWork';
+import MovieDetail from './pages/MovieDetail';
 
 // Global Style
 import GlobalStyles from './components/GlobalStyle';
@@ -18,7 +19,8 @@ function App() {
 			<Switch>
 				<Route exact path='/' component={AboutUs} />
 				<Route exact path='/work' component={OurWork} />
-				<Route exact path='/contact' component={ContactUs} />
+				<Route path='/work/:id' component={MovieDetail} />
+				<Route path='/contact' component={ContactUs} />
 				<Route component={NotFound} />
 			</Switch>
 		</div>
