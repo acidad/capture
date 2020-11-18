@@ -1,6 +1,6 @@
 // Styled
 import styled from 'styled-components';
-import { About } from '../Styles';
+import { About } from '../styles';
 
 const FaqSection = () => {
 	return (

@@ -5,6 +5,10 @@ import styled from 'styled-components';
 
 import { MovieState } from '../movieState';
 
+// Animation
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
+
 const MovieDetail = () => {
 	const history = useHistory();
 	const url = history.location.pathname;
@@ -25,7 +29,12 @@ const MovieDetail = () => {
 	}, [url, movies]);
 
 	return (
-		<>
+		<motion.div
+			exit='exit'
+			variants={pageAnimation}
+			initial='hidden'
+			animate='show'
+		>
 			{movie && (
 				<Details>
 					<HeadLine>
@@ -46,7 +55,7 @@ const MovieDetail = () => {
 					</ImageDisplay>
 				</Details>
 			)}
-		</>
+		</motion.div>
 	);
 };
 
