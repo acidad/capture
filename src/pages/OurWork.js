@@ -20,6 +20,9 @@ import {
 	sliderContainer,
 } from '../animation';
 
+// Components
+import ScrollTop from '../components/ScrollTop';
+
 const OurWork = () => {
 	return (
 		<Work
@@ -72,6 +75,7 @@ const OurWork = () => {
 					<img src={goodtimes} alt='couple overlooking ocean' />
 				</Link>
 			</Movie> */}
+			<ScrollTop />
 		</Work>
 	);
 };
